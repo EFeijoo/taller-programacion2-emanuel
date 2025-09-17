@@ -3,6 +3,7 @@ let conceptosCache = [];
 let editingId = null;
 
 const form = document.getElementById('concepto-form');
+console.log('form encontrado:', form);
 const lista = document.getElementById('lista-conceptos');
 const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -51,6 +52,7 @@ function attachButtons() {
 }
 
 form.onsubmit = async e => {
+  console.log('📝 submit detectado');
   e.preventDefault();
   const nombre = document.getElementById('nombre').value.trim();
   const descripcion = document.getElementById('descripcion').value.trim();
